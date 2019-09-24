@@ -1,5 +1,5 @@
 {
-  "name": "boilerplate",
+  "name": "pg",
   "version": "0.0.3",
   "description": "A simple boilerplate for quick web projects inlcuding Laravel-Mix & TailwindCSS.",
   "scripts": {
@@ -24,5 +24,8 @@
     "sass-loader": "7.*",
     "tailwindcss": "^1.1.2",
     "vue-template-compiler": "^2.6.10"
+  },
+  "dependencies": {
+    "dom-to-image": "^2.6.0"
   }
 }
