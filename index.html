@@ -18,7 +18,7 @@
 		<div style="display:grid; grid-template-columns: 1fr 1fr;" class="container bg-white mt-8 md:mt-16 mx-auto shadow-xl border-2 border-blue-400">
 			<div class="items-center p-8 bg-blue-100">
 				<h2 class="text-sm uppercase text-gray-500 font-bold mb-3">preview</h2>
-				<div id="post" style="width:500px; height: 500px; background: #4399e1 center center;" class="mx-auto relative" >
+				<div id="post" style="width:500px; height: 500px; background: #4399e1 center center;" class="relative" >
 					<div id="headline" class="font-bold text-xl absolute text-center text-white" style="top:50%; left:50%; transform: translateX(-50%) translateY(-50%);">Your headline</div>
 				</div>
 			</div>
@@ -27,19 +27,19 @@
 				<form>
 					<div class="mb-4">
 						<label class="block text-gray-700 text-sm font-bold mb-2" for="hlfield">Headline</label>
-						<input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" id="hlfield" name="headline" placeholder="Your headline">
+						<input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" id="hlfield" name="headline" value="Your headline">
 					</div>
 					<div class="mb-4">
 						<label class="block text-gray-700 text-sm font-bold mb-2" for="bgfield">Background Image URL</label>
-						<input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" id="bgfield" name="background" placeholder="Your background">
+						<input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" id="bgfield" name="background" value="https://images.unsplash.com/photo-1567790315662-1eaecc719eb8?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max">
 					</div>
 				    <div class="flex items-center justify-between">
 				      <button id="generate" class="bg-blue-500 hover:bg-blue-700 text-white border border-blue-500 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
 				        Download
 				      </button>
-				      <button id="randomize" class="bg-transparent hover:bg-blue-500 text-blue-500 border border-blue-500 font-bold py-2 px-4 rounded hover:text-white focus:outline-none focus:shadow-outline" type="button">
+<!-- 				      <button id="randomize" class="bg-transparent hover:bg-blue-500 text-blue-500 border border-blue-500 font-bold py-2 px-4 rounded hover:text-white focus:outline-none focus:shadow-outline" type="button">
 				        Randomize
-				      </button>
+				      </button> -->
 				    </div>
 				</form>
 			</div>
