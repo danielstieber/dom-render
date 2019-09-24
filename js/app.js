@@ -880,8 +880,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function generate() {
-  var node = document.querySelector('#post');
-  dom_to_image__WEBPACK_IMPORTED_MODULE_0___default.a.toJpeg(node, {
+  dom_to_image__WEBPACK_IMPORTED_MODULE_0___default.a.toJpeg(post, {
     quality: 0.95
   }).then(function (dataUrl) {
     var link = document.createElement('a');
@@ -899,21 +898,28 @@ function random() {
 }
 
 function updateHeadline() {
-  var headline = document.querySelector('#headline');
   headline.innerHTML = hlField.value;
 }
 
+function updateStyle() {
+  headline.classList.remove("text-white", "text-red-500");
+  headline.classList.add(hlStyle.value);
+}
+
 function updateBackground() {
-  var post = document.querySelector('#post');
   post.style.backgroundImage = "url(".concat(bgField.value, ")");
 }
 
+var headline = document.querySelector('#headline');
+var post = document.querySelector('#post');
 var hlField = document.querySelector('#hlfield');
 var bgField = document.querySelector('#bgfield');
+var hlStyle = document.querySelector('#hlstyle');
 var btnRandom = document.querySelector('#randomize');
 var btnGenerate = document.querySelector('#generate');
 hlField.addEventListener('change', updateHeadline);
 hlField.addEventListener('keyup', updateHeadline);
+hlStyle.addEventListener('change', updateStyle);
 bgField.addEventListener('change', updateBackground);
 bgField.addEventListener('keyup', updateBackground); // btnRandom.addEventListener('click', random);
 

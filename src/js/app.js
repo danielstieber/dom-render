@@ -1,8 +1,7 @@
 import domtoimage from 'dom-to-image';
 
 function generate() {
-	const node = document.querySelector('#post');
-	domtoimage.toJpeg(node, { quality: 0.95 })
+	domtoimage.toJpeg(post, { quality: 0.95 })
 	    .then(function (dataUrl) {
 	        var link = document.createElement('a');
 	        link.download = 'my-image-name.jpeg';
@@ -22,24 +21,31 @@ function random()
 
 function updateHeadline()
 {
-	const headline = document.querySelector('#headline');
 	headline.innerHTML = hlField.value;
+}
+function updateStyle()
+{
+	headline.classList.remove("text-white", "text-red-500");
+	headline.classList.add(hlStyle.value);
 }
 
 function updateBackground()
 {
-	const post = document.querySelector('#post');
 	post.style.backgroundImage = `url(${bgField.value})`;
 }
 
-
+const headline = document.querySelector('#headline');
+const post = document.querySelector('#post');
 const hlField = document.querySelector('#hlfield');
 const bgField = document.querySelector('#bgfield');
+const hlStyle = document.querySelector('#hlstyle');
 const btnRandom = document.querySelector('#randomize');
 const btnGenerate = document.querySelector('#generate');
 
 hlField.addEventListener('change', updateHeadline);
 hlField.addEventListener('keyup', updateHeadline);
+hlStyle.addEventListener('change', updateStyle);
+
 bgField.addEventListener('change', updateBackground);
 bgField.addEventListener('keyup', updateBackground);
 // btnRandom.addEventListener('click', random);
